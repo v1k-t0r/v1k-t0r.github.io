@@ -5,6 +5,21 @@
 <style>body{margin:24px auto;max-width:960px;background:#fff}
 .pdf-btn{display:inline-block;margin-top:6px;background:#4F46E5;color:#fff !important;text-decoration:none;padding:5px 12px;border-radius:4px;font-size:13px;line-height:1.6}
 .pdf-btn:hover{background:#3730a3}
+@media screen and (max-width:720px){
+ body{margin:12px}
+ body>div{font-size:14px !important}
+ body>div table,body>div tbody,body>div tr,body>div td{display:block;width:100% !important;box-sizing:border-box}
+ body>div>table:first-of-type tr{display:flex;flex-direction:column}
+ body>div>table:first-of-type td{padding:0 0 12px 0 !important;text-align:left !important}
+ body>div>table:first-of-type td:nth-child(2){order:-1;text-align:center !important}
+ body>div>table:first-of-type td:nth-child(3){padding-left:40px !important;line-height:1.9 !important}
+ body>div>table:last-of-type td{padding:0 !important}
+ body>div>table:last-of-type td:last-child{margin-top:18px}
+ body>div>table:last-of-type td:first-child>div[style*="padding-left: 40px"]{padding-left:22px !important}
+ body>div>table:last-of-type td:first-child>div[style*="border-left"]{border-left-width:12px !important;padding-left:10px !important}
+ body>div>table:last-of-type td:first-child>div[style*="margin: 0 0 8px 40px"]{margin-left:0 !important}
+ img{width:110px !important;height:110px !important}
+}
 @media print{.pdf-btn{display:none} @page{size:A4;margin:8mm 9mm} body{zoom:.77;margin:0} li{break-inside:avoid}}</style>
 </head><body>
 <div style="font-family: Roboto, 'Helvetica Neue', Arial, sans-serif; color: #1a1a1a; font-size: 13px; line-height: 1.4; max-width: 920px; background: #ffffff;">
