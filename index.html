@@ -1,0 +1,207 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Viktor Ganin — DevOps Engineer</title>
+<style>body{margin:24px auto;max-width:960px;background:#fff}
+.pdf-btn{display:inline-block;margin-top:6px;background:#4F46E5;color:#fff !important;text-decoration:none;padding:5px 12px;border-radius:4px;font-size:13px;line-height:1.6}
+.pdf-btn:hover{background:#3730a3}
+@media print{.pdf-btn{display:none} @page{size:A4;margin:8mm 9mm} body{zoom:.77;margin:0} li{break-inside:avoid}}</style>
+</head><body>
+<div style="font-family: Roboto, 'Helvetica Neue', Arial, sans-serif; color: #1a1a1a; font-size: 13px; line-height: 1.4; max-width: 920px; background: #ffffff;">
+
+<table style="width: 100%; border-collapse: collapse; border: none; border-bottom: 2px solid #4F46E5; margin-bottom: 18px;">
+<tr>
+<td style="width: 44%; vertical-align: top; border: none; padding: 0 0 14px 0;">
+<div style="border-left: 22px solid #4F46E5; padding-left: 18px;">
+<div style="font-size: 34px; color: #4F46E5; line-height: 1.1;">Viktor Ganin</div>
+<div style="font-size: 17px; color: #333; margin: 4px 0 10px;">DevOps Engineer | Platform Engineer | SRE</div>
+</div>
+<div style="padding-left: 40px;">DevOps engineer with 7+ years of experience. System administrator with 8+ years of experience. Python developer.</div>
+</td>
+<td style="width: 22%; vertical-align: middle; text-align: center; border: none; padding: 0 0 14px 0;">
+<img src="viktor-ganin-photo.jpg" alt="Viktor Ganin" width="130" height="130" style="border-radius: 50%; border: 5px solid #2d3a45; object-fit: cover;">
+</td>
+<td style="width: 34%; vertical-align: top; text-align: right; border: none; padding: 4px 0 14px 0; line-height: 2.2;">
+<a href="https://linkedin.com/in/viktor-ganin" style="color: #1a1a1a; text-decoration: none;">linkedin.com/in/viktor-ganin</a> <span style="color: #4F46E5; font-weight: bold;">in</span><br>
+<a href="https://github.com/v1k-t0r" style="color: #1a1a1a; text-decoration: none;">github.com/v1k-t0r</a> <span style="color: #4F46E5;">⌂</span><br><br>
+<a class="pdf-btn" href="viktor-ganin-cv.pdf" download="Viktor_Ganin_CV.pdf">⤓ Download PDF</a>
+</td>
+</tr>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+<tr>
+<!-- ================= LEFT COLUMN: WORK EXPERIENCE ================= -->
+<td style="width: 60%; vertical-align: top; border: none; padding: 0 28px 0 0;">
+
+<div style="font-size: 22px; font-weight: bold; margin: 0 0 8px 40px;">WORK EXPERIENCE</div>
+
+<div style="border-left: 22px solid #2d3a45; padding-left: 18px; margin-bottom: 4px;">
+<div style="font-size: 16px; font-weight: bold;">DevOps Engineer</div>
+<div style="font-size: 16px;">Sweed <span style="font-size: 12px; color: #555;">(Multi-tenant retail POS and e-commerce SaaS platform)</span></div>
+</div>
+<div style="padding-left: 40px;">
+<div style="display: flex; justify-content: space-between; font-style: italic; font-size: 11px; color: #444;"><span>05/2025 - 10/2026</span><span>Montenegro</span></div>
+<div style="font-size: 11px;"><a href="https://www.sweedpos.com">https://www.sweedpos.com</a></div>
+<div style="font-style: italic; font-size: 11px; color: #555; margin-top: 4px;">Achievements/Tasks</div>
+<ul style="margin: 2px 0 14px; padding-left: 16px;">
+<li>Built the infrastructure for a public API project using <b>Envoy Gateway</b> (<b>Kubernetes Gateway API</b>) and <b>Keycloak</b> (<b>Kubernetes Operator</b>) with <b>AWS Aurora PostgreSQL</b> database.</li>
+<li>Implemented automated CDN failover logic to bypass <b>Cloudflare</b> during network incidents, ensuring uninterrupted service delivery.</li>
+<li>Moved production edge traffic off <b>Cloudflare</b> proxying to dedicated <b>Envoy</b> gateways behind <b>AWS ALB</b> and <b>WAF</b>, including the <b>DNS</b> cutover for all production environments.</li>
+<li>Planned and executed the migration from GitLab Container Registry to a multi-regional <b>Amazon ECR</b> setup, improving availability and compliance.</li>
+<li>Automated cross-region, cross-account <b>Redis</b> database dump creation and restoration processes using <b>Amazon S3 Replication</b> to support disaster recovery planning (<b>DRP</b>).</li>
+<li>Redesigned the <b>ClickHouse</b> backup process to protect <b>Kubernetes nodes</b> from disk saturation and cut backup time by 50% (from 32 to 16 minutes).
+<li>Provisioned an isolated <b>RabbitMQ</b> cluster with <b>Kubernetes Operator</b> for marketing team purposes.</li>
+<li>Adopted, customized and deployed a <b>Slack bot</b> integrated with <b>Jira</b> and <b>PagerDuty</b> to streamline and prioritize incoming requests to the DevOps team.</li>
+<li>Shipped a Slack <b>rollback</b> application (<b>Helm</b>, <b>Argo CD</b>, <b>GitLab CI</b>) so developers can roll back production themselves.</li>
+<li>Maintained the observability stack: <b>ELK</b>, <b>Prometheus</b>, <b>Grafana</b>, <b>Loki</b>, <b>Jaeger</b>, <b>Vector</b>, <b>Uptime</b>.</li>
+<li>Closed <b>600+</b> infrastructure tickets, including <b>450+</b> duty requests and <b>30+</b> high-priority production issues.</li>
+</ul>
+</div>
+
+<div style="border-left: 22px solid #2d3a45; padding-left: 18px; margin-bottom: 4px;">
+<div style="font-size: 16px; font-weight: bold;">DevOps Engineer/SRE</div>
+<div style="font-size: 16px;">Libertex Group <span style="font-size: 12px; color: #555;">(Online broker and trading platform)</span></div>
+</div>
+<div style="padding-left: 40px;">
+<div style="display: flex; justify-content: space-between; font-style: italic; font-size: 11px; color: #444;"><span>10/2023 - 05/2025</span><span>Montenegro</span></div>
+<div style="font-size: 11px;"><a href="https://libertex.org">https://libertex.org</a></div>
+<div style="font-style: italic; font-size: 11px; color: #555; margin-top: 4px;">Achievements/Tasks</div>
+<ul style="margin: 2px 0 14px; padding-left: 16px;">
+<li>CI/CD modernization from <b>ECS</b> services manually deployed by <b>Jenkins</b> jobs to automatic deployment in <b>EKS</b> with <b>GitLab</b>, <b>ArgoCD</b> and <b>Helmfiles</b>.</li>
+<li>Ran <b>EKS</b> clusters with <b>Karpenter</b> for node autoscaling.</li>
+<li>Developed <b>AWS Lambda Python</b> functions integrated with <b>HashiCorp Vault</b> to automate and optimize internal processes.</li>
+<li>Developed and maintained <b>AWS</b> cloud infrastructure with <b>Terraform/Terragrunt</b>.</li>
+<li>Maintained the <b>ELK</b> stack. Supported developers.</li>
+</ul>
+</div>
+
+<div style="border-left: 22px solid #2d3a45; padding-left: 18px; margin-bottom: 4px;">
+<div style="font-size: 16px; font-weight: bold;">DevOps Platform Engineer</div>
+<div style="font-size: 16px;">Twill <span style="font-size: 12px; color: #555;">(Digital mental-health company, formerly Happify)</span></div>
+</div>
+<div style="padding-left: 40px;">
+<div style="display: flex; justify-content: space-between; font-style: italic; font-size: 11px; color: #444;"><span>01/2022 - 06/2023</span><span>Budva, Montenegro</span></div>
+<div style="font-size: 11px;"><a href="https://www.linkedin.com/company/twill-health">https://www.linkedin.com/company/twill-health</a></div>
+<div style="font-style: italic; font-size: 11px; color: #555; margin-top: 4px;">Achievements/Tasks</div>
+<ul style="margin: 2px 0 14px; padding-left: 16px;">
+<li>Was a key participant in the creation of a self-service platform for developers.</li>
+<li>Helped developers split monolithic applications into microservices.</li>
+<li>Was a key contributor to infrastructure modernization: from <b>EC2</b> instances provisioned by <b>CloudFormation</b> and configured by <b>Ansible</b> to <b>AWS EKS</b> provisioned by <b>Terraform</b>; from databases on EC2 hosts to <b>AWS RDS</b>; from <b>Ansible Vault</b> to <b>AWS Secrets Manager</b>.</li>
+<li>Worked with event-driven AWS services, including <b>SQS</b> and <b>EventBridge</b>.</li>
+<li>Worked with the Compliance and Security teams to address identified vulnerabilities and bring applications in line with industry, <b>GDPR/HIPAA</b> and customer requirements.</li>
+<li>Made a key contribution to the modernization of CI/CD: from deb packages manually deployed by a <b>Jenkins</b> job to fully automatic deployment with <b>GitHub Actions</b> and <b>Helm</b>.</li>
+</ul>
+</div>
+
+<div style="border-left: 22px solid #2d3a45; padding-left: 18px; margin-bottom: 4px;">
+<div style="font-size: 16px; font-weight: bold;">DevOps Engineer</div>
+<div style="font-size: 16px;">Alar Studios <span style="font-size: 12px; color: #555;">(Outsourcing company; worked on the Happify mental-health platform, later Twill)</span></div>
+</div>
+<div style="padding-left: 40px;">
+<div style="display: flex; justify-content: space-between; font-style: italic; font-size: 11px; color: #444;"><span>08/2019 - 01/2022</span><span>Budva, Montenegro</span></div>
+<div style="font-size: 11px;"><a href="https://www.linkedin.com/company/alar-studios">https://www.linkedin.com/company/alar-studios</a></div>
+<div style="font-style: italic; font-size: 11px; color: #555; margin-top: 4px;">Achievements/Tasks</div>
+<ul style="margin: 2px 0 14px; padding-left: 16px;">
+<li>Developed and maintained fully automated CI/CD pipelines for code deployment using <b>Jenkins</b>, <b>Ansible</b> and <b>GitHub Actions</b>.</li>
+<li>Created, managed, improved and monitored <b>GDPR/HIPAA</b>-compliant cloud infrastructure on <b>AWS</b> using IaC tools: <b>CloudFormation</b>, <b>Terraform</b>, <b>Ansible</b>, <b>Zabbix</b> and more.</li>
+<li>Built containers to break up a monolithic app into microservices, improving developer workflow, increasing scalability and optimizing speed.</li>
+<li>Integrated unit tests, code quality analysis and code coverage tests into CI/CD (<b>JUnit</b>, <b>SonarQube</b>).</li>
+</ul>
+</div>
+
+</td>
+<!-- ================= RIGHT COLUMN ================= -->
+<td style="width: 40%; vertical-align: top; border: none; padding: 0;">
+
+<div style="font-size: 22px; font-weight: bold; margin: 0 0 8px;">SKILLS</div>
+<div style="line-height: 2.3; margin-bottom: 22px;">
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Linux</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Amazon Web Services (AWS)</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Infrastructure as code (IaC)</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Kubernetes</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">CI/CD</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Terraform</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Terragrunt</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Helm</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">GitOps</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Scripting</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Ansible</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Jenkins</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">GitHub Actions</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">GitLab CI/CD</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Containerization</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Kustomize</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">ArgoCD</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">FluxCD</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Docker</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Karpenter</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Kyverno</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Envoy Gateway</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Python</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Bash</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Golang</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Git</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">PostgreSQL</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">MySQL</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">ClickHouse</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Redis</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">RabbitMQ</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Elasticsearch</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">HashiCorp Vault/Packer</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Keycloak</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Prometheus</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Grafana</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">OpenTelemetry</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">Elastic Stack (ELK)</span>
+<span style="background: #4F46E5; color: #fff; padding: 4px 9px; border-radius: 4px; white-space: nowrap;">GDPR/HIPAA</span>
+</div>
+
+<div style="font-size: 22px; font-weight: bold; margin: 0 0 6px;">OTHER EXPERIENCE</div>
+<div style="font-size: 14px;">Youhodler - DevOps Engineer</div>
+<div><span style="font-size: 11px; color: #555;">Crypto lending and fintech platform</span></div>
+<div style="font-size: 13px;">(07/2023 - 08/2023)</div>
+<ul style="margin: 2px 0 10px; padding-left: 16px; font-size: 11.5px;">
+<li>Implemented the snapshot controller for K8s and wrote a detailed restore guide for ClickHouse and Apache ZooKeeper using this controller or clickhouse-backup.</li>
+<li>Implemented the AWS ECR controller for K8s, used it to adopt existing application repositories, and created OCI repositories for app configuration manifests.</li>
+<li>Created a GHA workflow to build and push manifests as OCI images to improve application delivery speed.</li>
+</ul>
+<div style="font-size: 14px;">Rebrainme - Software Engineer (Part-time)</div>
+<div><span style="font-size: 11px; color: #555;">Education platform</span></div>
+<div style="font-size: 13px;">(12/2021 - 07/2022)</div>
+<ul style="margin: 2px 0 10px; padding-left: 16px; font-size: 11.5px;">
+<li>Developed software for automatic checks of practical assignments completed by students using <b>Python</b>.</li>
+</ul>
+<div style="font-size: 14px;">System Administration</div>
+<div style="font-size: 13px;">(09/2011 - 08/2019)</div>
+<ul style="margin: 2px 0 22px; padding-left: 16px; font-size: 11.5px;">
+<li>Senior System Administrator — Tekhpromsintez Manufacturing Complex, Russia (09/2017 - 08/2019)</li>
+<li>System Administrator — SNG Global Trading, Korolyov, Moscow, Russia (10/2014 - 08/2017)</li>
+<li>Regional System Administrator — ZAO "TK Megapolis", Moscow, Russia (09/2011 - 09/2014)</li>
+</ul>
+
+<div style="font-size: 22px; font-weight: bold; margin: 0 0 6px;">EDUCATION</div>
+<div style="font-size: 16px; font-weight: bold;">Engineer's degree, Aircraft automatic control systems</div>
+<div style="font-size: 16px;">Bauman Moscow State Technical University</div>
+<div style="font-style: italic; font-size: 11px; color: #444; margin-bottom: 22px;">09/2002 - 03/2008</div>
+
+<div style="font-size: 22px; font-weight: bold; margin: 0 0 6px;">MENTORING</div>
+<div style="font-size: 13px;">Rebrainme</div>
+<div style="font-style: italic; font-size: 11px; color: #777; margin-bottom: 22px;">Worked as a mentor for students on Linux workshops</div>
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
+<div style="font-size: 22px; font-weight: bold; margin: 0 0 6px;">LANGUAGES</div>
+<div style="font-size: 13px;">English</div>
+<div style="font-style: italic; font-size: 11px; color: #555; margin-bottom: 8px;">Professional Working Proficiency</div>
+<div style="font-size: 13px;">Russian</div>
+<div style="font-style: italic; font-size: 11px; color: #555; margin-bottom: 8px;">Native or Bilingual Proficiency</div>
+<div style="font-size: 13px;">Serbian</div>
+<div style="font-style: italic; font-size: 11px; color: #555;">Elementary Proficiency</div>
+</div>
+
+</td>
+</tr>
+</table>
+
+</div>
+</body></html>
