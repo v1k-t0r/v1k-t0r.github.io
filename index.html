@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Viktor Ganin — DevOps Engineer</title>
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.className=t}catch(e){}</script>
 <meta name="author" content="Viktor Ganin">
 <meta name="keywords" content="DevOps, Senior DevOps Engineer, Platform Engineering, Site Reliability Engineering, SRE, AWS, Amazon Web Services, Amazon EKS, Amazon ECR, AWS Lambda, Amazon S3, Aurora PostgreSQL, AWS WAF, ALB, Kubernetes, Docker, Containerization, Helm, Kustomize, Karpenter, Kyverno, Envoy Gateway, Gateway API, Terraform, Terragrunt, Infrastructure as Code, IaC, Ansible, CloudFormation, CI/CD, GitOps, Argo CD, Flux CD, GitLab CI, GitHub Actions, Jenkins, Python, Bash, Golang, Git, Linux, PostgreSQL, MySQL, ClickHouse, Redis, RabbitMQ, Elasticsearch, HashiCorp Vault, Packer, Keycloak, Cloudflare, Prometheus, Grafana, Loki, Jaeger, OpenTelemetry, ELK Stack, Observability, Disaster Recovery, GDPR, HIPAA, Cost Optimization, Incident Response, PagerDuty, On-call, Claude Code, AI Coding Agents, AI-assisted Development, VPC, VPC Peering, Transit Gateway, Microsoft Azure, Azure, Alibaba Cloud, Alicloud, Java, Spring Boot, Dynatrace, Logstash, Kibana, Data Obfuscation, Database Backups, MySQL Backups, Cross-account Restore, Data Masking, Data Anonymization, Cross-region Backups, Cross-account Backups, PostgreSQL Replication, Database Maintenance, PostgreSQL Major Version Upgrade, Terraform Import, Terraform State, Drift Remediation, Amazon RDS, RDS Proxy, Amazon CloudFront, AWS NLB, Cloud Cost Optimization, Right-sizing, GitLab CI Monitoring, CI/CD Observability, Alerting, Disaster Recovery Runbook, S3 Cross-Region Replication, ECR Replication, Immutable Tags, Postmortems, Runbooks, Incident Management, Technical Documentation, Windows, Windows Server, PowerShell, Microsoft SQL Server, MSSQL, VMware ESXi, Hyper-V, iDRAC, iLO, IPMI, Bare Metal, Routing, Switching, System Administration">
 <style>body{margin:24px auto;max-width:960px;background:#fff}
@@ -22,7 +23,41 @@
  body>div>table:last-of-type td:first-child>div[style*="margin: 0 0 8px 40px"]{margin-left:0 !important}
  img{width:110px !important;height:110px !important}
 }
-@media print{.pdf-btn{display:none} @page{size:A4;margin:8mm 9mm} body{zoom:.77;margin:0} li{break-inside:avoid}}</style>
+.theme-btn{display:inline-block;margin:6px 0 0 6px;background:transparent;color:#4F46E5;border:1px solid #4F46E5;border-radius:4px;padding:4px 9px;font-size:13px;line-height:1.6;cursor:pointer;vertical-align:top}
+.theme-btn:hover{background:rgba(79,70,229,.12)}
+@media screen{
+html.dark{color-scheme:dark}
+html.dark body,html.dark body>div{background:#16181d !important;color:#e2e4e9 !important}
+html.dark [style*="color: #1a1a1a"]{color:#e2e4e9 !important}
+html.dark [style*="color: #333"]{color:#d2d5db !important}
+html.dark [style*="color: #444"]{color:#b9bdc5 !important}
+html.dark [style*="color: #555"]{color:#a9aeb7 !important}
+html.dark [style*="color: #777"]{color:#939aa4 !important}
+html.dark [style*="color: #4F46E5"]{color:#8f96ff !important}
+html.dark [style*="solid #2d3a45"]{border-color:#56687a !important}
+html.dark [style*="border-bottom: 2px solid #4F46E5"]{border-bottom-color:#7b7ff7 !important}
+html.dark a{color:#8ab4f8}
+html.dark svg [fill="#4F46E5"]{fill:#8f96ff}
+html.dark svg [stroke="#fff"]{stroke:#16181d}
+html.dark .theme-btn{color:#e2e4e9;border-color:#8f96ff}
+}
+@media screen and (prefers-color-scheme:dark){
+html:not(.light){color-scheme:dark}
+html:not(.light) body,html:not(.light) body>div{background:#16181d !important;color:#e2e4e9 !important}
+html:not(.light) [style*="color: #1a1a1a"]{color:#e2e4e9 !important}
+html:not(.light) [style*="color: #333"]{color:#d2d5db !important}
+html:not(.light) [style*="color: #444"]{color:#b9bdc5 !important}
+html:not(.light) [style*="color: #555"]{color:#a9aeb7 !important}
+html:not(.light) [style*="color: #777"]{color:#939aa4 !important}
+html:not(.light) [style*="color: #4F46E5"]{color:#8f96ff !important}
+html:not(.light) [style*="solid #2d3a45"]{border-color:#56687a !important}
+html:not(.light) [style*="border-bottom: 2px solid #4F46E5"]{border-bottom-color:#7b7ff7 !important}
+html:not(.light) a{color:#8ab4f8}
+html:not(.light) svg [fill="#4F46E5"]{fill:#8f96ff}
+html:not(.light) svg [stroke="#fff"]{stroke:#16181d}
+html:not(.light) .theme-btn{color:#e2e4e9;border-color:#8f96ff}
+}
+@media print{.pdf-btn,.theme-btn{display:none} @page{size:A4;margin:8mm 9mm} body{zoom:.77;margin:0} li{break-inside:avoid}}</style>
 </head><body>
 
 <div style="font-family: Roboto, 'Helvetica Neue', Arial, sans-serif; color: #1a1a1a; font-size: 13px; line-height: 1.32; max-width: 920px; background: #ffffff;">
@@ -43,7 +78,7 @@
 <a href="https://linkedin.com/in/viktor-ganin" style="color: #1a1a1a; text-decoration: none;">linkedin.com/in/viktor-ganin</a> <svg width="12" height="12" viewBox="-1 -1 26 26" style="vertical-align: -1px; overflow: visible;"><path fill="#4F46E5" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.370-1.85 3.601 0 4.267 2.370 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.140 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.200 24 24 23.227 24 22.271V1.729C24 .774 23.200 0 22.222 0h.003z"/></svg><br>
 <a href="https://github.com/v1k-t0r" style="color: #1a1a1a; text-decoration: none;">github.com/v1k-t0r</a> <svg width="12" height="12" viewBox="-1 -1 26 26" style="vertical-align: -1px; overflow: visible;"><path fill="#4F46E5" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.070 3.633 17.700 3.633 17.700c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.070 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.930 0-1.310.465-2.380 1.235-3.220-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.300 1.230.96-.267 1.980-.399 3-.405 1.020.006 2.040.138 3 .405 2.280-1.552 3.285-1.230 3.285-1.230.645 1.653.24 2.873.12 3.176.765.840 1.230 1.910 1.230 3.220 0 4.610-2.805 5.625-5.475 5.920.42.36.81 1.096.81 2.220 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
 <br><span style="color: #1a1a1a;">Montenegro (CET)</span> <svg width="12" height="14" viewBox="-3 -1 30 34" style="vertical-align: -2px; overflow: visible;"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0zm0 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" fill="#4F46E5"/></svg><br><br>
-<a class="pdf-btn" href="viktor-ganin-cv.pdf" download="Viktor_Ganin_CV.pdf">⤓ Download PDF</a>
+<a class="pdf-btn" href="viktor-ganin-cv.pdf" download="Viktor_Ganin_CV.pdf">⤓ Download PDF</a> <button class="theme-btn" type="button" aria-label="Switch light or dark theme" title="Switch light or dark theme"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:-2px"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
 </td>
 </tr>
 </table>
@@ -266,4 +301,7 @@
 </div>
 
 </div>
+<script>(function(){var h=document.documentElement,b=document.querySelector(".theme-btn");
+function dark(){return h.classList.contains("dark")||(!h.classList.contains("light")&&matchMedia("(prefers-color-scheme: dark)").matches)}
+b.addEventListener("click",function(){var t=dark()?"light":"dark";h.className=t;try{localStorage.setItem("theme",t)}catch(e){}})})()</script>
 </body></html>
