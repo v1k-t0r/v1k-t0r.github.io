@@ -5,21 +5,30 @@ SRC=$(cd "${CV_SRC:-$(dirname "$0")/../cv}" && pwd)
 cd "$(dirname "$0")"
 cp "$SRC/viktor-ganin-photo.jpg" .
 
-# Web PDF: same layout and print settings as cv-viktor-ganin-main.pdf, without lines marked <!-- private --> (contacts)
+# Public copy of the CV: no lines marked <!-- private --> (contacts), and no city.
+# The CV marks the city as <span data-city>City, </span>; drop the span and every keyword containing the city.
+CITY=$(grep -o '<span data-city>[^<]*</span>' "$SRC/cv-viktor-ganin-main.md" | head -1 | sed -e 's/<[^>]*>//g' -e 's/, *$//')
+[[ -n $CITY ]] || { echo "error: no <span data-city> in the CV" >&2; exit 1; }
+PUB=$(mktemp --suffix=.md)
 TMP=$(mktemp --suffix=.html)
-trap 'rm -f "$TMP"' EXIT
+trap 'rm -f "$TMP" "$PUB"' EXIT
+grep -v -e '<!-- private -->' "$SRC/cv-viktor-ganin-main.md" \
+  | sed -e 's|<span data-city>[^<]*</span>||g' \
+        -e "/^<!-- pdf-keywords:/s/ [^,]*$CITY[^,]*,//g" > "$PUB"
+
+# Web PDF: same layout and print settings as cv-viktor-ganin-main.pdf
 {
   echo '<!doctype html><html><head><meta charset="utf-8"><title>Viktor Ganin — CV</title>'
   echo "<base href=\"file://$PWD/\">"
   echo '<style>@page{size:A4;margin:8mm 9mm} html,body{margin:0;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact} body{zoom:0.77} li{break-inside:avoid} a{color:#2f6db5}</style>'
   echo '</head><body>'
-  grep -v -e '<!-- private -->' "$SRC/cv-viktor-ganin-main.md"
+  cat "$PUB"
   echo '</body></html>'
 } > "$TMP"
 chromium-browser --headless --disable-gpu --no-sandbox --allow-file-access-from-files --no-pdf-header-footer \
   --print-to-pdf="$PWD/viktor-ganin-cv.pdf" "$TMP" >/dev/null 2>&1
 # Copy <!-- pdf-author/subject/keywords: ... --> comments from the CV into the PDF metadata for ATS
-/usr/bin/python3 - "$SRC/cv-viktor-ganin-main.md" viktor-ganin-cv.pdf <<'PY'
+/usr/bin/python3 - "$PUB" viktor-ganin-cv.pdf <<'PY'
 import re, sys, pikepdf
 src, out = sys.argv[1], sys.argv[2]
 text = open(src, encoding="utf-8").read()
@@ -36,7 +45,7 @@ PY
   echo '<title>Viktor Ganin — DevOps Engineer</title>'
   echo '<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.className=t}catch(e){}</script>'
   # Same author/keywords as the PDF metadata
-  sed -n 's/^<!-- pdf-\(author\|keywords\): \(.*\) -->$/<meta name="\1" content="\2">/p' "$SRC/cv-viktor-ganin-main.md"
+  sed -n 's/^<!-- pdf-\(author\|keywords\): \(.*\) -->$/<meta name="\1" content="\2">/p' "$PUB"
   echo '<style>body{margin:24px auto;max-width:960px;background:#fff}'
   echo '.pdf-btn{display:inline-block;margin-top:6px;background:#4F46E5;color:#fff !important;text-decoration:none;padding:5px 12px;border-radius:4px;font-size:13px;line-height:1.6}'
   echo '.pdf-btn:hover{background:#3730a3}'
@@ -85,7 +94,7 @@ PY
   echo '@media print{.pdf-btn,.theme-btn{display:none} @page{size:A4;margin:8mm 9mm} body{zoom:.77;margin:0} li{break-inside:avoid}}</style>'
   echo '</head><body>'
   # Leave the email address off the public page; put the download button under the last contact line (location)
-  grep -v -e '<!-- private -->' -e '^<!-- pdf-' "$SRC/cv-viktor-ganin-main.md" \
+  grep -v -e '^<!-- pdf-' "$PUB" \
     | sed '/Montenegro (CET)<\/span>/s|$|<br><br>\n<a class="pdf-btn" href="viktor-ganin-cv.pdf" download="Viktor_Ganin_CV.pdf">⤓ Download PDF</a> <button class="theme-btn" type="button" aria-label="Switch light or dark theme" title="Switch light or dark theme"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:-2px"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>|'
   # Theme toggle: remembers the choice; without one the page follows the system setting
   echo '<script>(function(){var h=document.documentElement,b=document.querySelector(".theme-btn");'
@@ -98,4 +107,6 @@ if pdftotext viktor-ganin-cv.pdf - | grep -qi -e '@gmail\.com' -e 't\.me/'; then
 pdfinfo viktor-ganin-cv.pdf | grep -q '^Keywords:' || { echo "error: PDF metadata missing" >&2; exit 1; }
 grep -q 'class="pdf-btn"' index.html || { echo "error: download button missing" >&2; exit 1; }
 grep -q 'class="theme-btn"' index.html || { echo "error: theme button missing" >&2; exit 1; }
+if grep -q 'data-city' index.html; then echo "error: city still in the public header" >&2; exit 1; fi
+if pdfinfo viktor-ganin-cv.pdf | grep -q "^Keywords:.*$CITY" || grep -q "<meta name=\"keywords\"[^>]*$CITY" index.html; then echo "error: city still in the public keywords" >&2; exit 1; fi
 echo "index.html and viktor-ganin-cv.pdf rebuilt"
