@@ -17,9 +17,16 @@
  body>div>table:first-of-type td:nth-child(2){order:-1;text-align:center !important}
  body>div>table:first-of-type td:nth-child(3){padding-left:40px !important;line-height:1.9 !important}
  body>div>table:last-of-type td{padding:0 !important}
- body>div>table:last-of-type td:last-child{margin-top:18px}
- body>div>table:last-of-type td:first-child>div[style*="padding-left: 40px"]{padding-left:22px !important}
- body>div>table:last-of-type td:first-child>div[style*="border-left"]{border-left-width:12px !important;padding-left:10px !important}
+ body>div{display:flex;flex-direction:column}
+ body>div>table:first-of-type{order:-2}
+ body>div>table:last-of-type,body>div>table:last-of-type>tbody,body>div>table:last-of-type>tbody>tr,body>div>table:last-of-type>tbody>tr>td{display:contents}
+ body>div>table:last-of-type>tbody>tr>td:last-child>*{order:1}
+ body>div>table:last-of-type>tbody>tr>td:last-child>:nth-child(-n+2){order:-1}
+ body>div>table:last-of-type>tbody>tr>td:last-child>:nth-child(2){margin-bottom:22px !important}
+ body>div>table:last-of-type>tbody>tr>td:last-child>:nth-child(3){margin-top:18px}
+ body>div>table:last-of-type td:first-child>div[style*="padding-left: 40px"],body>div>div[style*="padding-left: 40px"]{padding-left:22px !important}
+ body>div>table:last-of-type td:first-child>div[style*="border-left"],body>div>div[style*="border-left"]{border-left-width:12px !important;padding-left:10px !important}
+ body>div>div[style*="border-left"]{margin-top:14px}
  body>div>table:last-of-type td:first-child>div[style*="margin: 0 0 8px 40px"]{margin-left:0 !important}
  img{width:110px !important;height:110px !important}
 }
