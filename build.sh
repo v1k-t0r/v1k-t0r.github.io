@@ -49,6 +49,8 @@ PY
   echo '<style>body{margin:24px auto;max-width:960px;background:#fff}'
   echo '.pdf-btn{display:inline-block;margin-top:6px;background:#4F46E5;color:#fff !important;text-decoration:none;padding:5px 12px;border-radius:4px;font-size:13px;line-height:1.6}'
   echo '.pdf-btn:hover{background:#3730a3}'
+  # Wide screens: no page break on screen, so space out the first full-width job (page 2 in the PDF) from the table
+  echo '@media screen and (min-width:721px){body>div>div[style*="break-before: page"]{margin-top:28px}}'
   # Phones: stack the header cells and the two columns; inline styles need !important
   echo '@media screen and (max-width:720px){'
   echo ' body{margin:12px}'
