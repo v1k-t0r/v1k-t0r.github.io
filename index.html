@@ -307,7 +307,7 @@ I run platforms end to end: <b>Terraform</b>/<b>Terragrunt</b>, CI/CD with <b>Gi
 <li>Developed and maintained fully automated CI/CD pipelines for code deployment using <b>Jenkins</b> (<b>Groovy</b> pipelines, shared libraries), <b>Ansible</b> and <b>GitHub Actions</b>.</li>
 <li>Rewrote the <b>Ansible</b> application deploy role: replaced deb packages installed on long-lived <b>EC2</b> hosts with container images deployed by <b>Docker Compose</b> on new instances; the role also ran database migrations and took secrets from <b>Ansible Vault</b>.</li>
 <li>Built and ran the <b>AWS</b> infrastructure with <b>CloudFormation</b> templates, <b>Terraform</b> and <b>Ansible</b> and monitored it with <b>Zabbix</b>; tracked application performance and errors with <b>New Relic</b> APM and <b>Sentry</b>.</li>
-<li>Moved production to <b>AWS ALB</b> with <b>AWS WAF</b>: migrated the <b>OWASP</b> rule set to WAFv2 as a <b>CloudFormation</b> template deployed by an <b>Ansible</b> role, with a count-only mode to test rules before blocking.</li>
+<li>Moved production behind <b>AWS ALB</b> with <b>AWS WAF</b>: wrote the <b>Ansible</b> roles that create the ALB and the WAF, with the <b>OWASP</b> rule set as a <b>CloudFormation</b> template and a count-only mode to test rules before blocking.</li>
 <li>Set up private connectivity between AWS VPCs with <b>VPC peering</b> and <b>Transit Gateway</b>, including routing and security groups.</li>
 <li>Maintained <b>PostgreSQL</b>: replication, major version upgrades, the <b>Odyssey</b> connection pooler and a sandbox database refreshed nightly from production.</li>
 <li>Wrote a scheduled check that alerts on old <b>AWS IAM</b> access keys, and rotated the keys it flagged.</li>
